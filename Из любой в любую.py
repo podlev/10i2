@@ -13,12 +13,11 @@ def to_o2(n,o2):
     s = ''
     while(n != 0):
         digit = n % o2
-        print(digit)
+        #print(digit)
         if 0 <= digit <= 9:
             s += str(digit)
         else:
-            #доделать
-            pass
+            s += chr(digit+ord('A')-10)
         n //= o2
     return s[::-1]
         
